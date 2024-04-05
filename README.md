@@ -10,6 +10,21 @@ It's small and tree-shakeable. If you only use get/set, the library is ~250 byte
 
 This is only a keyval store. If you need to do more complex things like iteration & indexing, check out [IDB on NPM](https://www.npmjs.com/package/idb) (a little heavier at 1k). The first example in its README is how to create a keyval store.
 
+> This version has been modified for my personal use. It now supports opening multiple stores at the same time instead of just 1 like the original library
+
+## Compatile 
+If you are specifying a custom `store` with syntax that looks like this:
+```ts
+const result = await get("test", customStore)
+```
+
+then this library will not be backward compatible. You need to modify it as follows:
+```ts
+import { DEFAULT_STORE } from "idb-keyval"
+
+const result = get("test", DEFAULT_STORE, customStore)
+```
+
 ## Installing
 
 ### Recommended: Via npm + webpack/rollup/parcel/etc

@@ -1,4 +1,4 @@
-const DEFAULT_STORE = "keyval"
+export const DEFAULT_STORE = "keyval"
 
 export function promisifyRequest<T = undefined>(
   request: IDBRequest<T> | IDBTransaction,
