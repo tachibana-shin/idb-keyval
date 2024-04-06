@@ -3,7 +3,7 @@
   "version": "6.2.1",
   "description": "A super-simple-small keyval store built on top of IndexedDB",
   "main": "./dist/compat.cjs",
-  "module": "./dist/compat.js",
+  "module": "./src/index.ts",
   "unpkg": "./dist/iife-compat.js",
   "exports": {
     ".": {
@@ -19,7 +19,7 @@
     "dist/**"
   ],
   "type": "module",
-  "types": "./dist/index.d.ts",
+  "types": "./src/index.ts",
   "sideEffects": false,
   "scripts": {
     "build": "rollup -c && node lib/size-report.js",
